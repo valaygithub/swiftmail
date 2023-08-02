@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Edit Form</title>
+  </head>
+  <body>
+    <h2 align="center">Edit Massage</h2>
+    <form method="post">
+      {% csrf_token %}
+      <table border="1" align="center">
+        <tr>
+          <td>Name:</td>
+          <td>
+            <input type="text" name="uname" value="{{data.name}}" />
+          </td>
+        </tr>
+        <tr>
+          <td>Email:</td>
+          <td><input type="email" name="umail" value="{{data.email}}" /></td>
+        </tr>
+        <tr>
+          <td>Mobile Number:</td>
+          <td>
+            <input type="number" name="mobile" value="{{data.mobile}}" />
+          </td>
+        </tr>
+        <tr>
+          <td>Messsage:</td>
+          <td>
+            <textarea name="msg" rows="8" cols="30">{{data.Message}}</textarea>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="submit" name="" value="update" /></td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

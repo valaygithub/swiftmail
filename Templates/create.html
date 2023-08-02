@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title> </title>
+  </head>
+  <body>
+    <h2 align="center">Create Massage</h2>
+    <form method="post">
+      {% csrf_token %}
+      <table border="1" align="center">
+        <tr>
+          <td>Name:</td>
+          <td><input type="text" name="uname" placeholder="sender name" /></td>
+        </tr>
+        <tr>
+          <td>Email:</td>
+          <td><input type="email" name="umail" placeholder="sender mail" /></td>
+        </tr>
+        <tr>
+          <td>Mobile Number:</td>
+          <td>
+            <input
+              type="number"
+              name="mobile"
+              placeholder="sender mobile number"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>Messsage:</td>
+          <td><textarea name="msg" rows="8" cols="30"></textarea></td>
+        </tr>
+        <tr>
+          <td><input type="submit" name="" value="send" /></td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
